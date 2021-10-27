@@ -39,6 +39,23 @@ module.exports = {
         sans: `"Poppins", ${defaultTheme.fontFamily.sans.join(',')}`,
         mono: `"IBM Plex Mono", ${defaultTheme.fontFamily.mono.join(',')}`
       },
+      fontSize: {
+        xs: '0.625rem',
+        sm: '0.75rem',
+        md: '0.8125rem',
+        base: '0.875rem',
+        lg: '1rem',
+        xl: '1.125rem',
+        '2xl': '1.25rem',
+        '3xl': '1.5rem',
+        '4xl': '2rem',
+        '5xl': '2.25rem',
+        '6xl': '2.5rem',
+        '7xl': '3rem',
+        '8xl': '4rem',
+        '9xl': '6rem',
+        '10xl': '8rem'
+      },
       opacity: {
         12: '0.12',
         38: '0.38',
@@ -133,7 +150,10 @@ module.exports = {
         ...theme('spacing'),
         ...theme('extendedSpacing'),
         screen: '100vw'
-      })
+      }),
+      backgroundImage: {
+        'blog-1': "url('/images/imgBlog1.jpeg')"
+      }
     }
   },
   variants: {
