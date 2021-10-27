@@ -16,21 +16,19 @@ const variants = {
 }
 
 const fade = {
-  open: { opacity: 1 },
-  closed: { opacity: 0 }
+  open: { opacity: 1, pointerEvents: 'unset' },
+  closed: { opacity: 0, pointerEvents: 'none' }
 }
 
 const Sidebar = ({ isOpen = false, onClose }) => {
   return (
-    <div
-      className="absolute top-0 text-primary-800 h-screen   md:right-auto md:bottom-px  z-40   "
-    >
+    <div className="absolute top-0 text-primary-800 h-screen md:right-auto md:bottom-px z-40">
       <motion.div
         variants={fade}
         onClick={onClose}
-        initial={{ opacity: 0 }}
-        className='absolute top-0 w-full h-screen bg-black bg-opacity-50 z-30'
         animate={isOpen ? 'open' : 'closed'}
+        initial={{ opacity: 0, pointerEvents: 'none' }}
+        className="fixed top-0 w-full h-screen bg-black bg-opacity-50"
       />
       <motion.div
         variants={variants}
@@ -38,7 +36,7 @@ const Sidebar = ({ isOpen = false, onClose }) => {
         initial={{ opacity: 0, x: '-100%' }}
         animate={isOpen ? 'open' : 'closed'}
       >
-        <div className=" text-primary-800 dark:text-white font-semibold  w-80 bg-white dark:bg-primary-800    min-h-screen border-r dark:border-black ">
+        <div className=" text-primary-800 dark:text-white font-semibold w-80 bg-white dark:bg-primary-800 min-h-screen border-r dark:border-black ">
           <div className="w-full h-16 pt-3 dark:bg-primary-700  px-3 ">
             <form action="w-full h-full border-b shadow-lg flex ">
               <div className=" flex sm:flex-row gap-6 items-center justify-center">
@@ -46,7 +44,8 @@ const Sidebar = ({ isOpen = false, onClose }) => {
                   <div className="absolute right-2 top-2.5 w-4 ">
                     <IconSearch className="cursor-pointer" />
                   </div>
-                  <input className=" w-full font-semibold border-2 border-on-warn-300 rounded-md  outline-none py-1 pl-2  focus:ring-2 focus:ring-on-warn-400 focus:border-on-warn-400"
+                  <input
+                    className=" w-full font-semibold border-2 border-on-warn-300 rounded-md  outline-none py-1 pl-2  focus:ring-2 focus:ring-on-warn-400 focus:border-on-warn-400"
                     name="name"
                     type="text"
                     id="name"
@@ -109,7 +108,7 @@ const Sidebar = ({ isOpen = false, onClose }) => {
             </ul>
           </div>
         </div>
-      </motion.div >
+      </motion.div>
       {/*   <HamburguesBtn show={showBtn} handleClick={handleShowBtn} /> */}
     </div>
   )
