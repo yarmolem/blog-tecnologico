@@ -36,8 +36,8 @@ module.exports = {
     extend: {
       colors: { ...themeColors },
       fontFamily: {
-        sans: `"Poppins", ${defaultTheme.fontFamily.sans.join(',')}`,
-        mono: `"IBM Plex Mono", ${defaultTheme.fontFamily.mono.join(',')}`
+        sans: `"Roboto Condensed", ${defaultTheme.fontFamily.sans.join(',')}`,
+        mono: `"Roboto", ${defaultTheme.fontFamily.mono.join(',')}`
       },
       fontSize: {
         xs: '0.625rem',
@@ -150,10 +150,7 @@ module.exports = {
         ...theme('spacing'),
         ...theme('extendedSpacing'),
         screen: '100vw'
-      }),
-      backgroundImage: {
-        'blog-1': "url('/images/imgBlog1.jpeg')"
-      }
+      })
     }
   },
   variants: {
