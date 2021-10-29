@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/dist/client/image'
-const Card = () => {
+const Card = ({ etiqueta, titulo, fecha }) => {
   return (
-    <div className="relative h-full  mx-auto shadow bg-cover flex">
+    <div className="relative w-full h-full  mx-auto shadow bg-cover flex">
       <div className="w-full flex justify-center items-end z-10">
         <div className="text-center w-full px-3 pb-4 bg-gradient-to-t from-primary-900 via-primary-800 to-transparent ">
           <div className="bg-secondary-400 text-white  w-15 text-xs font-bold">

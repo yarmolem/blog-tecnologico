@@ -36,7 +36,7 @@ module.exports = {
     extend: {
       colors: { ...themeColors },
       fontFamily: {
-        sans: `"Roboto Condensed", ${defaultTheme.fontFamily.sans.join(',')}`,
+        sans: `"RobotoCondensed", ${defaultTheme.fontFamily.sans.join(',')}`,
         mono: `"Roboto", ${defaultTheme.fontFamily.mono.join(',')}`
       },
       fontSize: {

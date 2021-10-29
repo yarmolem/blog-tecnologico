@@ -1,6 +1,7 @@
 import '../styles/index.css'
 import Sidebar from '../components/sidebar'
 import Header from '../components/Header'
+import Footer from '../components/footer/Footer'
 import useToggle from '../hooks/useToggle'
 import { useState } from 'react'
 
@@ -13,8 +14,8 @@ const MyApp = ({ Component, pageProps }) => {
         <Header {...{ onOpen, theme, setTheme }} />
         <Sidebar {...{ isOpen, onClose }} />
         <Component {...pageProps} />
+        <Footer />
       </div>
-
     </div>
   )
 }

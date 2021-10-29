@@ -9,7 +9,7 @@ const BigCard = () => {
             <h5>ANDROID</h5>
           </div>
           <div className="text-lg text-white font-bold text-left mt-2">
-            <span className="text-right text-base sm:text-3xl" >
+            <span className="text-right text-base sm:text-4xl" >
               Como tener PROCREATE de iOS en Android
             </span>
           </div>
