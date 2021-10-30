@@ -7,7 +7,7 @@ const Article = ({ titulo, fecha }) => {
         <Image src="/images/aplicacion2.jpeg" layout="fill" alt="" />
       </div>
       <div className="flex flex-col">
-        <div className="text-base text-primary-900 font-bold text-left mt-2">
+        <div className="text-base text-primary-900 dark:text-primary-50 font-bold text-left mt-2">
           <h2 className="text-left text-base mb-2" >
             {titulo}
           </h2>

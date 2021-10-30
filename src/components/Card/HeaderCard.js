@@ -6,8 +6,8 @@ const HeaderCard = ({ text, boton = true, header = true }) => {
       <div className="w-full flex justify-between items-center bg-black dark:bg-primary-800 py-2 px-4">
         <div className="text-white font-bold">{text}</div>
         {boton &&
-          <div className="bg-secondary-400 dark:bg-primary-700 text-center text-white w-15 text-xs font-bold p-1">
-            <button><h5>Ver todo</h5></button>
+          <div className="bg-secondary-400 dark:bg-primary-700 text-center font-mono text-white w-15 text-sm  ">
+            <button><span>Ver todo</span></button>
           </div>}
       </div>
     )

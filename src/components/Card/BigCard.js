@@ -1,23 +1,23 @@
 import React from 'react'
 import Image from 'next/dist/client/image'
-const BigCard = () => {
+const BigCard = ({ etiqueta, titulo, fecha, descripcion }) => {
   return (
     <div className="relative h-full mx-auto shadow bg-cover flex">
       <div className="w-full flex justify-center items-end z-10">
         <div className="text-center w-full px-3 pb-4 bg-gradient-to-t from-primary-900 via-primary-800 to-transparent ">
           <div className="bg-secondary-400 text-white  w-15 text-xs font-bold">
-            <h5>ANDROID</h5>
+            <h5>{etiqueta}</h5>
           </div>
           <div className="text-lg text-white font-bold text-left mt-2">
             <span className="text-right text-base sm:text-4xl" >
-              Como tener PROCREATE de iOS en Android
+              {titulo}
             </span>
           </div>
           <div className="text-primary-200 text-sm text-left mb-2">
-            October 18, 2021
+            {fecha}
           </div>
           <div className="text-primary-200 text-base text-left hidden sm:block">
-            Si eres de los que te gusta diseñar y tener una app de dibujo que sea de gran ayuda para la labor que realizas, te cuento que hoy te traeré una increí…
+            {descripcion}
           </div>
         </div>
       </div>

@@ -4,8 +4,12 @@ import CompleteCard from '../components/Card/CompleteCard'
 import RecentArticles from '../sections/Landing/RecentArticles'
 import Comments from '../sections/Landing/Comments'
 import TagsMenu from '../sections/Landing/TagsMenu'
-import Blog from '../sections/Contenido/Blog'
-import Image from 'next/dist/client/image'
+import HeaderBlog from '../sections/Contenido/HeaderBlog'
+import ContentBlog from '../sections/Contenido/ContentBlog'
+import FooterBlog from '../sections/Contenido/FooterBlog'
+import GridTwoIphone from '../sections/Landing/GridTwoIphone'
+import PostComment from '../sections/Contenido/PostComment'
+import { IconMayor, IconMenor } from '../../public/icons/icon'
 const Contenido = () => {
   const crumbs = [
     { path: '/', label: 'Inicio' },
@@ -16,17 +20,29 @@ const Contenido = () => {
       <Head><title>Jamesitok - Contenido</title></Head>
       <div className=" my-4 flex flex-col lg:flex-row  justify-center md:max-w-280 mx-auto gap-5">
         <div className="w-full border-solid border-primary-800 ">
-          <div className="border-solid border-primary-50 border-b-2 ">
-            <Blog crumbs={crumbs} />
+          <div className="border-solid border-primary-50 border-b dark:border-primary-800 ">
+            <HeaderBlog crumbs={crumbs} />
           </div>
-          <div className="bg-white dark:bg-primary-800  p-4">
-            <div className="relative min-w-56 h-56 sm:h-90 md:h-100">
-              <Image src="/images/aplicacion2.jpeg" layout="fill" alt="" />
+          <div className="bg-white dark:bg-primary-800  px-4 pt-12">
+            <ContentBlog />
+            <FooterBlog />
+          </div>
+          <div className="mt-5 border-primary-50 border-b dark:border-primary-800 ">
+            <GridTwoIphone text="Te puede gustar" />
+          </div>
+          <div className="mt-10 ">
+            <PostComment text="Publicar un comentario" />
+            <div className="mt-30"></div>
+            <div className="flex text-primary-500 dark:text-primary-300 font-mono text-base justify-between ">
+              <div className="flex gap-1 hover:text-secondary-500 ">
+                <IconMenor className="w-2 " />
+                <a href="">Artículo Anterior</a>
+              </div>
+              <div className="flex gap-1 hover:text-secondary-500">
+                <a href="">Artículo Siguiente</a>
+                <IconMayor className="w-2 " />
+              </div>
             </div>
-            <div className="mt-3"></div>
-            <p className>
-              Hola chicos y chicas bienvenidos a un nuevo tics de aplicaciones, Hoy para los amantes creadores de videos musicales que buscan incluir en escenas divertidas,  grandes efectos e incluir la magia que  captara a todos tus seguidores, pues te cuento que conocerás una aplicación muy útil para el desarrollo de tus videos musicales, producirás videos como todo un profesional.
-            </p>
           </div>
         </div>
         <div className="w-full h-full lg:w-2/4 sticky top-0">

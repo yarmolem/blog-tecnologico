@@ -16,3 +16,9 @@
   font-weight: 500;
   src: url(/fonts/RobotoCondensed-Regular.woff2);
 }
+@font-face {
+  font-display: swap;
+  font-family: Roboto;
+  font-weight: 500;
+  src: url(/fonts/RobotoRegular.woff2);
+}

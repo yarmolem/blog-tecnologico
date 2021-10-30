@@ -9,21 +9,77 @@ import GridTwoIphone from '../sections/Landing/GridTwoIphone'
 import TagsMenu from '../sections/Landing/TagsMenu'
 import ReadMore from '../sections/Landing/ReadMore'
 import RecentArticles from '../sections/Landing/RecentArticles'
+
+const data = [{
+  id: 1,
+  title: 'Iphone',
+  etiqueta: 'Android',
+  titulo: 'Como tener PROCREATE de iOS en Android',
+  fecha: 'October 18, 2021',
+  boton: true,
+  tituloCardSmall: 'TikTok estilo iPhone en Android + Emojis iOs15',
+  fechaCardSmall: 'October 18, 2021'
+},
+{
+  id: 2,
+  title: 'Android',
+  etiqueta: 'Android',
+  titulo: 'Como tener PROCREATE de iOS en Android',
+  fecha: 'October 18, 2021',
+  boton: true,
+  tituloCardSmall: 'TikTok estilo iPhone en Android + Emojis iOs15',
+  fechaCardSmall: 'October 18, 2021'
+}]
+
+const data2 = {
+  id: 1,
+  title: 'Articulos Populares',
+  etiqueta: 'Android',
+  titulo: 'Como tener PROCREATE de iOS en Android',
+  fecha: 'October 18, 2021',
+  boton: false,
+  tituloCardSmall: 'TikTok estilo iPhone en Android + Emojis iOs15',
+  fechaCardSmall: 'October 18, 2021'
+}
+
+const data3 = {
+  id: 1,
+  title: 'Articulos Populares',
+  etiqueta: 'Android',
+  titulo: 'Como tener PROCREATE de iOS en Android',
+  descripcion: 'Si eres de los que te gusta diseñar y tener una app de dibujo que sea de gran ayuda para la labor que realizas, te cuento que hoy te traeré una increí…',
+  fecha: 'October 18, 2021',
+  boton: false,
+  tituloCardSmall: 'TikTok estilo iPhone en Android + Emojis iOs15',
+  fechaCardSmall: 'October 18, 2021'
+}
+
+const data4 = {
+  id: 1,
+  title: 'Articulos Populares',
+  etiqueta: 'Android',
+  titulo: 'Como tener PROCREATE de iOS en Android',
+  descripcion: 'Si eres de los que te gusta diseñar y tener una app de dibujo que sea de gran ayuda para la labor que realizas, te cuento que hoy te traeré una increí…',
+  fecha: 'October 18, 2021',
+  boton: false,
+  tituloCardSmall: 'TikTok estilo iPhone en Android + Emojis iOs15',
+  fechaCardSmall: 'October 18, 2021'
+}
 const Home = () => {
   return (
     <div className=" mx-3">
       <Head><title>Jamesitok</title></Head>
-      <GridInicio />
-      <div className=" my-4 flex flex-col lg:flex-row  justify-center md:max-w-280 mx-auto gap-5">
+      <GridInicio {...data4} />
+      <div className=" my-4 flex flex-col lg:flex-row  justify-center md:max-w-280 mx-auto gap-7">
         <div className="w-full ">
-          <GridAplicaciones title="Aplicaciones" />
-          <GridTwoCols title="Iphone" title2="Android" />
+          <GridAplicaciones {...data3} />
+          <GridTwoCols {...{ data }} />
           <ReadMore />
-          <GridTwoAndroid />
-          <GridTwoIphone />
+          <GridTwoAndroid etiqueta="Android" titulo="Como tener PROCREATE de iOS en Android" fecha="October 18, 2021" />
+          <GridTwoIphone etiqueta="Android" titulo="Como tener PROCREATE de iOS en Android" fecha="October 18, 2021" text="Iphone" />
         </div>
         <div className="w-full h-full lg:w-2/4 sticky top-0">
-          <CompleteCard title="Articulos Populares" boton={false} />
+          <CompleteCard {...data2} />
           <RecentArticles />
           <Comments />
           <TagsMenu />

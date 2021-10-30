@@ -11,13 +11,13 @@ const index = () => {
           </div>
           <div className="text-white ">
             <h3 className="font-bold text-xl mb-1">Acerca de</h3>
-            <p className="text-gray-300 text-base">Aquí encontraras las mejores aplicaciones y personalizaciones para tu teléfono <br /> celular con Android.Blog de tecnología y apps moviles.</p>
+            <p className="text-gray-300 text-base font-mono">Aquí encontraras las mejores aplicaciones y personalizaciones para tu teléfono <br /> celular con Android.Blog de tecnología y apps moviles.</p>
           </div>
         </div>
       </div>
-      <div className="w-full    items-center bg-black  py-3 px-4">
+      <div className="w-full    items-center bg-primary-900  py-3 px-4">
         <div className="justify-start flex md:max-w-280 mx-auto text-white text-base text-left">
-          <p> Copyright © 2021 Jamesitok</p>
+          <p className="font-mono"> Copyright © 2021 Jamesitok</p>
         </div>
       </div>
     </div >

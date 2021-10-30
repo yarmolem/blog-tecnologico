@@ -2,19 +2,20 @@ import React from 'react'
 import Card from '../../components/Card/Card'
 import SmallArticle from '../../components/Article/SmallArticle'
 import HeaderCard from '../../components/Card/HeaderCard'
-const CompleteCard = ({ title, boton }) => {
+const CompleteCard = (props) => {
+  console.log(props)
   return (
     <div className="">
-      <HeaderCard text={title} boton={boton} />
+      <HeaderCard text={props.title} boton={props.boton} />
       <div className="bg-white dark:bg-primary-800 p-4 ">
         <div className="w-full h-48 md:h-56 row-span-2">
-          <Card />
+          <Card etiqueta={props.etiqueta} titulo={props.titulo} fecha={props.fecha} />
         </div>
         <div className="mt-4 grid grid-cols-1 gap-5">
-          <SmallArticle />
-          <SmallArticle />
-          <SmallArticle />
-          <SmallArticle />
+          <SmallArticle titulo={props.tituloCardSmall} fecha={props.fechaCardSmall} />
+          <SmallArticle titulo={props.tituloCardSmall} fecha={props.fechaCardSmall} />
+          <SmallArticle titulo={props.tituloCardSmall} fecha={props.fechaCardSmall} />
+          <SmallArticle titulo={props.tituloCardSmall} fecha={props.fechaCardSmall} />
         </div>
       </div>
     </div>
