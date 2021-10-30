@@ -10,9 +10,11 @@ const index = ({ onOpen, theme, setTheme, onClose }) => {
           <div className="relative w-5 h-5 sm:block lg:hidden">
             <IconHamburger className="cursor-pointer" onClick={onOpen} />
           </div>
-          <div className="relative w-48 h-9">
-            <Image src="/images/logoJamesitok.png" layout="fill" alt="" />
-          </div>
+          <Link href="/">
+            <a onClick={onClose} className="cursor-pointer">
+              <div className="relative w-48 h-9"><Image src="/images/logoJamesitok.png" layout="fill" alt="" />
+              </div></a>
+          </Link>
           <nav className="hidden lg:block">
             <ul className="flex items-center">
               <li className="cursor-pointer py-6 px-4 text-base font-bold tracking-tight">
@@ -21,7 +23,7 @@ const index = ({ onOpen, theme, setTheme, onClose }) => {
                 </Link>
               </li>
               <li className="cursor-pointer py-6 px-4 text-base font-bold">
-                <Link href="/">
+                <Link href="/tendencias">
                   <a onClick={onClose}>TENDENCIAS</a>
                 </Link>
               </li>

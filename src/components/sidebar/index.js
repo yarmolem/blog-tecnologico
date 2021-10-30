@@ -67,8 +67,8 @@ const Sidebar = ({ isOpen = false, onClose }) => {
                 </Link>
               </li>
               <li className="cursor-pointer py-2 text-sm font-bold">
-                <Link href="/">
-                  <a onClick={onClose}>TENDENCIA</a>
+                <Link href="/tendencias">
+                  <a onClick={onClose}>TENDENCIAS</a>
                 </Link>
               </li>
               <li className="cursor-pointer py-2 text-sm font-bold">
