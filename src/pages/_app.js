@@ -1,9 +1,11 @@
 import '../styles/index.css'
-import Sidebar from '../components/sidebar'
-import Header from '../components/Header'
-import Footer from '../components/footer/Footer'
-import useToggle from '../hooks/useToggle'
+import 'tailwindcss/tailwind.css'
 import { useState } from 'react'
+
+import Header from '../components/Header'
+import useToggle from '../hooks/useToggle'
+import Sidebar from '../components/sidebar'
+import Footer from '../components/footer/Footer'
 
 const MyApp = ({ Component, pageProps }) => {
   const [theme, setTheme] = useState('')

@@ -13,8 +13,7 @@ const themeColors = {
     800: '#262626',
     900: '#0d0d0d'
   },
-  secondary:
-  {
+  secondary: {
     50: '#ffe1e1',
     100: '#ffb1b1',
     200: '#ff7f7f',
@@ -29,7 +28,12 @@ const themeColors = {
 }
 
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: [
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/hooks/**/*.{js,ts,jsx,tsx}',
+    './src/sections/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}'
+  ],
   darkMode: 'class', // or 'media' or 'class'
   important: true,
   theme: {
